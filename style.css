@@ -91,7 +91,19 @@ textarea {
   border-radius: 10px;
 }
 
+.icon:hover {
+  background-color: #B07C9E;
+}
 .icon i{
   font-size: 15px;
   color: #fff;
+}
+
+#notification {
+  position: absolute;
+  z-index: 9;
+  left: 20%;
+  display: none;
+  transition: .3s ease;
+  opacity: 0.3;
 }

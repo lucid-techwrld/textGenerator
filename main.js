@@ -1,5 +1,3 @@
-
-
 function generateText() {
   let text = document.getElementById('textToGenerate').value;
   const num = document.getElementById('numToGenerate').value;
@@ -22,7 +20,14 @@ document.getElementById("copyIcon").addEventListener("click", function() {
 
     // Copy the text inside the input field
     navigator.clipboard.writeText(text.value).then(function() {
-        alert("Text copied to clipboard!");
+        // Show the notification
+        var notification = document.getElementById("notification");
+        notification.style.display = "block";
+
+        // Hide the notification after 2 seconds
+        setTimeout(function() {
+            notification.style.display = "none";
+        }, 2000);
     }).catch(function(error) {
         alert("Failed to copy text: " + error);
     });
